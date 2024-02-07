@@ -26,3 +26,16 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+//Prints an arrow(lab)
+void print_arrow(int leftcol, int size){
+  print_triangle(leftcol, size);
+  int squarestart = leftcol + (size - (size / 2));
+  int endCol = leftcol + size;
+  for(int row = 0; row < size; row++){
+    int col;
+    for(col = 0; col < leftcol + squarestart; col++) putchar(' ');
+    for( ; col < (leftcol + squarestart + size); col++) putchar('*');
+    for( ; col < endCol; col++)putchar(' ');
+    putchar('\n');
+  }
+}
