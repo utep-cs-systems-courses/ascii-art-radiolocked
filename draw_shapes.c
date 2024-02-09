@@ -33,8 +33,8 @@ void print_arrow(int leftcol, int size){
   int endCol = leftcol + size;
   for(int row = 0; row < size; row++){
     int col;
-    for(col = 0; col < leftcol + squarestart; col++) putchar(' ');
-    for( ; col < (leftcol + squarestart + size); col++) putchar('*');
+    for(col = 0; col < squarestart; col++) putchar(' ');
+    for( ; col < (squarestart + size); col++) putchar('*');
     for( ; col < endCol; col++)putchar(' ');
     putchar('\n');
   }
